@@ -1,5 +1,6 @@
 let phoneNumber = document.getElementById("number")
 let msgs = document.querySelector(".msgs")
+let cont = document.querySelector(".cont")
 let newMsg = document.getElementById("input")
 let button = document.getElementById("send")
 let urlInput = document.getElementById("url")
@@ -26,7 +27,7 @@ const setMsgs = () => {
     currentMsgs.forEach(msg => {
         msgs.appendChild(createEl(msg.msg, msg.toFrom))
     });
-    window.scrollTo(0, document.body.scrollHeight);
+    cont.scrollTo(0, cont.scrollHeight);
 }
 
 
@@ -48,7 +49,7 @@ const sendMsg = async () => {
     let toFrom = 'sent'
     currentMsgs.push({ msg, toFrom })
     msgs.appendChild(createEl(msg, toFrom))
-
+    cont.scrollTo(0, cont.scrollHeight);
     try {
         let response = await fetch(url, {
             method: 'POST',
@@ -75,6 +76,7 @@ const sendMsg = async () => {
                     currentMsgs.push({ msg: replyMsg, toFrom: 'recieved' })
 
                     msgs.appendChild(createEl(replyMsg, 'recieved'))
+                    cont.scrollTo(0, cont.scrollHeight);
                 }
 
             })
@@ -83,6 +85,7 @@ const sendMsg = async () => {
             replyMsg = replyMsg.replace(/\n/g, "<br>")
             currentMsgs.push({ msg: replyMsg, toFrom: 'recieved' })
             msgs.appendChild(createEl(replyMsg, 'recieved'))
+            cont.scrollTo(0, cont.scrollHeight);
         }
     } catch (error) {
         replyMsg = 'did  not fetch! recieved error:<br>"'+error+'"'
@@ -90,6 +93,7 @@ const sendMsg = async () => {
         //replyMsg = replyMsg.replace(/\n/g, "<br>")
         currentMsgs.push({ msg: replyMsg, toFrom: 'recieved' })
         msgs.appendChild(createEl(replyMsg, 'recieved'))
+        cont.scrollTo(0, cont.scrollHeight);
     }
 
 

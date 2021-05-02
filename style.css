@@ -49,6 +49,7 @@
 }
 body {
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 .write {
   width: 100%;

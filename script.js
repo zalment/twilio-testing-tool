@@ -5,6 +5,8 @@ let newMsg = document.getElementById("input")
 let button = document.getElementById("send")
 let urlInput = document.getElementById("url")
 
+let sound=new Audio('msg_sound.mp3')
+
 let url = urlInput.value == "" ? "http://127.0.0.1:3000/" : urlInput.value
 urlInput.addEventListener("change", () => {
     url = urlInput.value == "" ? "http://127.0.0.1:3000/" : urlInput.value
@@ -76,6 +78,7 @@ const sendMsg = async () => {
                     currentMsgs.push({ msg: replyMsg, toFrom: 'recieved' })
 
                     msgs.appendChild(createEl(replyMsg, 'recieved'))
+                    sound.play()
                     cont.scrollTo(0, cont.scrollHeight);
                 }
 
@@ -85,6 +88,7 @@ const sendMsg = async () => {
             replyMsg = replyMsg.replace(/\n/g, "<br>")
             currentMsgs.push({ msg: replyMsg, toFrom: 'recieved' })
             msgs.appendChild(createEl(replyMsg, 'recieved'))
+            sound.play()
             cont.scrollTo(0, cont.scrollHeight);
         }
     } catch (error) {
@@ -93,6 +97,7 @@ const sendMsg = async () => {
         //replyMsg = replyMsg.replace(/\n/g, "<br>")
         currentMsgs.push({ msg: replyMsg, toFrom: 'recieved' })
         msgs.appendChild(createEl(replyMsg, 'recieved'))
+        sound.play()
         cont.scrollTo(0, cont.scrollHeight);
     }
 

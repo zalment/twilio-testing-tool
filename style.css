@@ -1,32 +1,32 @@
-.cont{
-    width: 100%;
-    height: 100vh;
-    margin: auto;
-background-color: #f4f4f4;
-overflow-y: auto;
-height: 80vh;
-
+.cont {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  background-color: #f4f4f4;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 80vh;
 }
 #number {
--webkit-appearance: none;
-outline: none;
-color: white;
-background: #147efb;
-padding: 10px;
+  -webkit-appearance: none;
+  outline: none;
+  color: white;
+  background: #147efb;
+  padding: 10px;
 }
 #url {
-background-color: rgb(240, 240, 240);
-border-radius: 5px;
-border: 2px solid #d1d1d1;
-padding: 10px;
-outline: none;
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  border: 2px solid #d1d1d1;
+  padding: 10px;
+  outline: none;
 }
-.msgs{
-    width: 100%;
-    padding: .5%;
-    margin-top: 10px;
+.msgs {
+  width: 100%;
+  padding: 0.5%;
+  margin-top: 10px;
 }
-.msg{
+.msg {
   padding: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -37,29 +37,28 @@ outline: none;
 }
 .sent {
   color: white;
-background-color: #147efb;
-border-radius: 15px 15px 5px 15px;
+  background-color: #147efb;
+  border-radius: 15px 15px 5px 15px;
 
-margin-left: auto;
-margin-right: 15px;
+  margin-left: auto;
+  margin-right: 15px;
 }
-.recieved{
+.recieved {
   border-radius: 15px 15px 15px 5px;
-    background-color: #e0e0e0;
+  background-color: #e0e0e0;
 }
-body{
-    font-family: sans-serif;
-
+body {
+  font-family: sans-serif;
 }
-.write{
+.write {
   width: 100%;
   text-align: center;
   bottom: 0px;
   position: absolute;
 }
-#input{
+#input {
   outline: none;
-transition: 0.1s linear;
+  transition: 0.1s linear;
   resize: none;
   width: 70%;
   font-size: 1.3em;
@@ -69,25 +68,25 @@ transition: 0.1s linear;
   border-radius: 5px;
   border: 2px solid #d1d1d1;
   line-height: 2;
-padding-left: 15px;
-padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #input:focus {
-border: 2px solid #747373;
+  border: 2px solid #747373;
 }
 
-#send{
-  transition: .3s;
+#send {
+  transition: 0.3s;
   position: relative;
-top: -22px;
+  top: -22px;
 
-padding: 20px;
-background-color: #147efb;
-border: none;
-color: white;
-border-radius: 5px;
+  padding: 20px;
+  background-color: #147efb;
+  border: none;
+  color: white;
+  border-radius: 5px;
 }
 #send:active {
-background-color: #0c4e9c;
+  background-color: #0c4e9c;
 }

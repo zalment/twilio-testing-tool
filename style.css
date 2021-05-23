@@ -21,6 +21,14 @@
   padding: 10px;
   outline: none;
 }
+#route {
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  border: 2px solid #d1d1d1;
+  padding: 10px;
+  outline: none;
+  width: 4em;
+}
 .msgs {
   width: 100%;
   padding: 0.5%;

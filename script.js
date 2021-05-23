@@ -14,6 +14,10 @@ urlInput.addEventListener("change", () => {
     url = urlInput.value == "" ? "http://127.0.0.1:3000/" : urlInput.value
     url+=routeInput.value
 })
+routeInput.addEventListener("change", () => {
+    url = urlInput.value == "" ? "http://127.0.0.1:3000/" : urlInput.value
+    url+=routeInput.value
+})
 let currentNumber = "+1" + phoneNumber.value
 
 let allMsgs = {}

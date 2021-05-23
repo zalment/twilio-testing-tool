@@ -4,12 +4,15 @@ let cont = document.querySelector(".cont")
 let newMsg = document.getElementById("input")
 let button = document.getElementById("send")
 let urlInput = document.getElementById("url")
+let routeInput = document.getElementById("route")
 
 let sound=new Audio('msg_sound.mp3')
 
 let url = urlInput.value == "" ? "http://127.0.0.1:3000/" : urlInput.value
+url+=routeInput.value
 urlInput.addEventListener("change", () => {
     url = urlInput.value == "" ? "http://127.0.0.1:3000/" : urlInput.value
+    url+=routeInput.value
 })
 let currentNumber = "+1" + phoneNumber.value
 
